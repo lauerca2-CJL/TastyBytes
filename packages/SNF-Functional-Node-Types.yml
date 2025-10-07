@@ -1,0 +1,25 @@
+config:
+  entities:
+    nodeTypes:
+      "399":
+        defaultStorageLocation: null
+        isDisabled: false
+      "404":
+        defaultStorageLocation: null
+        isDisabled: false
+      "409":
+        defaultStorageLocation: null
+        isDisabled: false
+      "410":
+        defaultStorageLocation: null
+        isDisabled: false
+      "459":
+        defaultStorageLocation: null
+        isDisabled: false
+  packageVariables: ""
+fileVersion: 1
+id: "@coalesce/snowflake/functional-node-types"
+name: SNF-Functional-Node-Types
+packageID: "@coalesce/snowflake/functional-node-types"
+releaseID: af77843d-f5e2-4bb8-ab09-8dbc2a833da6
+type: Package
