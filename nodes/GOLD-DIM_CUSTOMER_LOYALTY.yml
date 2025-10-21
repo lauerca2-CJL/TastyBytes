@@ -96,7 +96,7 @@ operation:
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
-        name: COUNTRY
+        name: COUNTRY_ID
         nullable: true
         sourceColumnReferences:
           - columnReferences:
