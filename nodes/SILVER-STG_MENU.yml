@@ -181,7 +181,10 @@ operation:
           - locationName: BRONZE
             nodeName: MENU
         join:
-          joinCondition: FROM {{ ref('BRONZE', 'MENU') }} "MENU"
+          joinCondition: |-
+            FROM {{ ref('BRONZE', 'MENU') }} "MENU", 
+            lateral flatten(input => "MENU_ITEM_HEALTH_METRICS_OBJ":"menu_item_health_metrics", OUTER => TRUE) "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics", 
+            lateral flatten(input => "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics".value:"ingredients", OUTER => TRUE) "MENU_ITEM_HEALTH_METRICS_OBJ_menu_item_health_metrics_ingredients"
         name: STG_MENU
         noLinkRefs: []
   name: STG_MENU

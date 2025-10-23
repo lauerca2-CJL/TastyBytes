@@ -15,12 +15,7 @@ operation:
   locationName: SILVER
   materializationType: table
   metadata:
-    appliedNodeTests:
-      - continueOnFailure: true
-        description: ""
-        name: Test
-        runOrder: After
-        templateString: ""
+    appliedNodeTests: []
     columns:
       - appliedColumnTests:
           hasNull: true
@@ -40,7 +35,7 @@ operation:
             transform: ""
       - appliedColumnTests:
           hasNull: false
-          isDistinct: true
+          isDistinct: false
         columnReference:
           columnCounter: 7b89e66d-584c-4e8e-8019-d5e2c55394ae
           stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47

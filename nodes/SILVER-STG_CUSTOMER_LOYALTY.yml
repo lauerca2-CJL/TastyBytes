@@ -23,7 +23,7 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: NUMBER(38,0)
-        description: ""
+        description: Unique identifier for each customer. Serves as the primary key for the customer dimension. Used for linking customer information across various business processes, including sales, marketing, and support. Sourced directly from the Customer_Loyalty table. Enables customer-centric reporting and analysis. Essential for creating customer segments and personalizing marketing campaigns. Referenced in customer lifetime value calculations. No transformations applied.
         name: CUSTOMER_ID
         nullable: true
         sourceColumnReferences:
@@ -37,49 +37,49 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Customer's first name, converted to uppercase. Used in personalized communications and customer service interactions. Sourced from the Customer_Loyalty table. Part of the customer's identifying information. Transformation applied: UPPER function. Supports name-based searches and segmentation. Included in customer profiles for a comprehensive view. Aids in identifying individual customers within the database. No data cleansing or standardization beyond the uppercase conversion."
         name: FIRST_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 6fdba137-ab68-439e-b916-87307a7c8c59
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
-            transform: ""
+            transform: UPPER("CUSTOMER_LOYALTY"."FIRST_NAME")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: b1e22a65-9258-4e18-8109-e52eda1dfd52
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Customer's last name, converted to uppercase. Used in personalized communications and customer service interactions. Sourced from the Customer_Loyalty table. Part of the customer's identifying information. Transformation applied: UPPER function. Supports name-based searches and segmentation. Included in customer profiles for a comprehensive view. Aids in identifying individual customers within the database. No data cleansing or standardization beyond the uppercase conversion."
         name: LAST_NAME
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: fb96cd17-1cd8-4191-9f25-6341557c8e4b
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
-            transform: ""
+            transform: UPPER("CUSTOMER_LOYALTY"."LAST_NAME")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: d6bdf564-a22d-44a7-ab1d-cf25308b6265
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Customer's city of residence, converted to uppercase. Used for geographic segmentation and regional sales analysis. Sourced from the Customer_Loyalty table. Transformation applied: UPPER function. Supports location-based marketing campaigns. Included in customer profiles for a comprehensive view. Aids in identifying customer concentrations. No data cleansing or standardization beyond the uppercase conversion. Useful for understanding regional customer preferences and trends."
         name: CITY
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: c58c5eb4-449d-4abd-9061-80460992d515
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
-            transform: ""
+            transform: UPPER("CUSTOMER_LOYALTY"."CITY")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 0f2bb390-bff1-4437-ad6e-6cbb3a7e1a8d
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: Number(18,0)
-        description: ""
+        description: Numeric identifier for the customer's country of residence. Foreign key to the Country table. Used for geographic segmentation and international sales analysis. Sourced directly from the Customer_Loyalty table. Enables country-specific reporting and analysis. Essential for understanding global customer distribution. Referenced in international marketing campaigns. No transformations applied. Supports compliance with international regulations and standards.
         name: COUNTRY_ID
         nullable: true
         sourceColumnReferences:
@@ -93,7 +93,7 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Postal code of the customer's address. Used for geographic segmentation and targeted marketing campaigns. Sourced directly from the Customer_Loyalty table. Supports location-based analysis at a granular level. Included in customer profiles for a comprehensive view. Aids in identifying local customer trends. No transformations applied. Useful for optimizing delivery routes and logistics. Supports demographic analysis within specific geographic areas.
         name: POSTAL_CODE
         nullable: true
         sourceColumnReferences:
@@ -107,63 +107,63 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Customer's preferred language, converted to uppercase. Used for personalizing communications and customer service interactions. Sourced from the Customer_Loyalty table. Transformation applied: UPPER function. Supports language-based segmentation. Included in customer profiles for a comprehensive view. Aids in delivering multilingual support. No data cleansing or standardization beyond the uppercase conversion. Useful for tailoring marketing messages to specific language groups."
         name: PREFERRED_LANGUAGE
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 52a05660-9b6e-4739-82a3-65c5a88e36ac
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
-            transform: ""
+            transform: UPPER("CUSTOMER_LOYALTY"."PREFERRED_LANGUAGE")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: c5ea3292-1f12-40a7-bcfe-b82ec27f3721
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Customer's gender, converted to uppercase. Used for demographic segmentation and marketing analysis. Sourced from the Customer_Loyalty table. Transformation applied: UPPER function. Supports gender-based marketing campaigns. Included in customer profiles for a comprehensive view. Aids in understanding gender-specific preferences. No data cleansing or standardization beyond the uppercase conversion. Useful for tailoring product offerings to specific gender groups."
         name: GENDER
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: ac74293b-1ea0-4813-8348-bf3260d4c1bf
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
-            transform: ""
+            transform: UPPER("CUSTOMER_LOYALTY"."GENDER")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 68f0fe50-8c7b-499a-b0d0-0a864f696957
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Customer's favorite brand, converted to uppercase. Used for targeted marketing campaigns and brand affinity analysis. Sourced from the Customer_Loyalty table. Transformation applied: UPPER function. Supports brand-based segmentation. Included in customer profiles for a comprehensive view. Aids in understanding brand preferences. No data cleansing or standardization beyond the uppercase conversion. Useful for tailoring product recommendations to specific brand affinities."
         name: FAVOURITE_BRAND
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: 14ba582c-91eb-416a-91a0-1d29d6356c13
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
-            transform: ""
+            transform: UPPER("CUSTOMER_LOYALTY"."FAVOURITE_BRAND")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 0d33be7f-0550-40e9-8ba5-9b14ad9947b7
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: "Customer's marital status, converted to uppercase. Used for demographic segmentation and marketing analysis. Sourced from the Customer_Loyalty table. Transformation applied: UPPER function. Supports marital status-based marketing campaigns. Included in customer profiles for a comprehensive view. Aids in understanding household compositions. No data cleansing or standardization beyond the uppercase conversion. Useful for tailoring product offerings to specific family structures."
         name: MARITAL_STATUS
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: e90ca991-0fb4-4799-8284-d2bd6c0f738b
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
-            transform: ""
+            transform: UPPER("CUSTOMER_LOYALTY"."MARITAL_STATUS")
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 25f7560c-f757-4f2a-a8e9-90162b381d4d
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Number of children associated with the customer. Used for demographic segmentation and family-oriented marketing campaigns. Sourced directly from the Customer_Loyalty table. Supports family size-based analysis. Included in customer profiles for a comprehensive view. Aids in understanding household needs. No transformations applied. Useful for tailoring product offerings to specific family sizes. Supports analysis of family spending patterns and preferences.
         name: CHILDREN_COUNT
         nullable: true
         sourceColumnReferences:
@@ -177,7 +177,7 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: DATE
-        description: ""
+        description: Date when the customer signed up for the loyalty program. Used for cohort analysis and customer lifecycle management. Sourced directly from the Customer_Loyalty table. Supports tracking customer acquisition trends. Included in customer profiles for a comprehensive view. Aids in understanding customer tenure. No transformations applied. Useful for measuring the effectiveness of marketing campaigns. Supports analysis of customer retention rates and patterns.
         name: SIGN_UP_DATE
         nullable: true
         sourceColumnReferences:
@@ -191,7 +191,7 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: DATE
-        description: ""
+        description: Date of birth for loyalty program members. Sourced directly from the CUSTOMER_LOYALTY table without transformations. Used in demographic analysis and age-based marketing campaigns. Helps tailor offers and communications based on customer life stage. Not a primary or foreign key. Format is YYYY-MM-DD. Useful in cohort analysis to understand customer behavior across different age groups. Important for compliance with data privacy regulations regarding children's data.
         name: BIRTHDAY_DATE
         nullable: true
         sourceColumnReferences:
@@ -205,7 +205,7 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Email address for loyalty program members. Primary method for digital communication and marketing campaigns. Sourced directly from the CUSTOMER_LOYALTY table without transformations. Used for sending promotional offers, account updates, and newsletters. Essential for tracking customer engagement and measuring campaign effectiveness. Not a primary or foreign key. Should adhere to standard email format. Critical for email marketing platforms and customer relationship management (CRM) systems.
         name: E_MAIL
         nullable: true
         sourceColumnReferences:
@@ -219,7 +219,7 @@ operation:
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Phone number for loyalty program members. Used for SMS marketing, customer service, and account verification. Sourced directly from the CUSTOMER_LOYALTY table without transformations. Facilitates direct communication for time-sensitive offers and support. Not a primary or foreign key. Format should adhere to standard phone number conventions. Important for multi-channel marketing strategies and emergency communications. Used in conjunction with email for comprehensive customer outreach.
         name: PHONE_NUMBER
         nullable: true
         sourceColumnReferences:
@@ -227,6 +227,26 @@ operation:
               - columnCounter: 7b456a1f-bfb9-4240-8311-21c0d02febfb
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 295e947a-e35a-4602-bdb2-46ea0176c8dc
+          stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: Concatenation of first and last names from the CUSTOMER_LOYALTY table. Created by combining the FIRST_NAME and LAST_NAME columns with a space in between. Used for personalized communications and reporting. Simplifies customer identification in reports and dashboards. Not a primary or foreign key. Supports easy searching and filtering of customer records. Useful in generating mailing labels and addressing customers in marketing materials. Ensures consistent naming conventions across systems.
+        keyColumnType: None
+        name: Full_Name
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "0"
+                stepCounter: "0"
+            transform: "\"CUSTOMER_LOYALTY\".\"FIRST_NAME\" || ' ' || \"CUSTOMER_LOYALTY\".\"LAST_NAME\""
+        systemColumnType: None
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
