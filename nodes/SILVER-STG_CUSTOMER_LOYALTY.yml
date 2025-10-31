@@ -78,7 +78,7 @@ operation:
           columnCounter: 0f2bb390-bff1-4437-ad6e-6cbb3a7e1a8d
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
         config: {}
-        dataType: Number(18,0)
+        dataType: NUMBER(18,0)
         description: Numeric identifier for the customer's country of residence. Foreign key to the Country table. Used for geographic segmentation and international sales analysis. Sourced directly from the Customer_Loyalty table. Enables country-specific reporting and analysis. Essential for understanding global customer distribution. Referenced in international marketing campaigns. No transformations applied. Supports compliance with international regulations and standards.
         name: COUNTRY_ID
         nullable: true
