@@ -94,7 +94,7 @@ operation:
           columnCounter: 5ec794cf-612f-4ee8-9ff7-7711e51758c3
           stepCounter: e15d7bc8-3780-4988-b1e6-8e624a4f7738
         config: {}
-        dataType: NUMBER(18,0)
+        dataType: VARCHAR(16777216)
         description: ""
         name: COUNTRY_ID
         nullable: true
