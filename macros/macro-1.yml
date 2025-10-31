@@ -1,0 +1,34 @@
+fileVersion: 1
+id: "1"
+macroString: |-
+  {% import "Test" as test with context %}
+
+
+  {#-- ************************************************************************************************* #}
+  {#-- Utility Macros #}
+  {#-- ************************************************************************************************* #}
+
+  {#-- group_by #}
+  {#-- Eg {{ group_by(10) }} #}
+
+  {%- macro group_by(n) -%}
+  GROUP BY
+  {%- for n in range(n) %} {{n + 1}}{%- if not loop.last %}, {% endif -%}
+  {% endfor -%}
+  {%- endmacro %}
+
+  {#-- even_odd #}
+  {#-- Eg {{ even_odd("C_CUSTKEY") }} #}
+
+  {%- macro even_odd(column) -%}
+  CASE WHEN MOD({{ column }}, 2) = 0 THEN 'EVEN' ELSE 'ODD' END
+  {%- endmacro %}
+
+  {#-- date_sk #}
+  {#-- Eg {{ date_sk("O_ORDERDATE") }} #}
+
+  {%- macro date_sk(column) -%}
+  TO_NUMBER(TO_CHAR({{ column }}, 'YYYYMMDD'))
+  {%- endmacro %}
+name: macro
+type: Macro
