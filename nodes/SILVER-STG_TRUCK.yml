@@ -176,15 +176,15 @@ operation:
           columnCounter: 0fc51d4c-0ac1-4cc7-8de8-56510f407410
           stepCounter: 39ea1086-3e8f-4df9-a8fd-b9db460902e2
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: NUMBER(38,0)
         description: ""
-        name: EV_Vehicle
+        name: EV_FLAG
         nullable: true
         sourceColumnReferences:
           - columnReferences:
               - columnCounter: dce11e20-ac07-4668-a467-349294315346
                 stepCounter: af0682ed-2a38-4e0e-a181-a0379ebbc79d
-            transform: CASE WHEN "TRUCK"."EV_FLAG" = 1 THEN 'Yes' WHEN "TRUCK"."EV_FLAG" = 0 THEN 'No' ELSE NULL END
+            transform: ""
       - appliedColumnTests: {}
         columnReference:
           columnCounter: 8dd3cc28-204d-482f-ac6c-8c3b736101f4

@@ -192,9 +192,9 @@ operation:
           columnCounter: 3be34333-dbed-47bd-bb18-c70f16580ec6
           stepCounter: a5a7d0df-7217-44a3-820c-5f2b0ce1a408
         config: {}
-        dataType: VARCHAR(16777216)
+        dataType: NUMBER(38,0)
         description: ""
-        name: EV_Vehicle
+        name: EV_FLAG
         nullable: true
         sourceColumnReferences:
           - columnReferences:
