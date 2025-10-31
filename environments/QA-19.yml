@@ -2,8 +2,8 @@ fileVersion: 1
 id: "19"
 mappingDefinitions:
   BRONZE:
-    database: MTANTRUM_DEV
-    schema: TASTY_BYTES_SMALL
+    database: CLAUER_DEV
+    schema: TASTY_BYTES
   GOLD:
     database: CLAUER_QA
     schema: GOLD
