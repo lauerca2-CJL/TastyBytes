@@ -7,6 +7,9 @@ mappingDefinitions:
   GOLD:
     database: CLAUER_QA
     schema: GOLD
+  SAP-BRONZE:
+    database: DOUG_DB
+    schema: SAP_SOURCE
   SILVER:
     database: CLAUER_QA
     schema: SILVER

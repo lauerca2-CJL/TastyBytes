@@ -3,4 +3,5 @@ fileVersion: 1
 locations:
   - BRONZE
   - GOLD
+  - SAP-BRONZE
   - SILVER
