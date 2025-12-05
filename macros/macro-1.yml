@@ -35,8 +35,8 @@ macroString: |
   {#-- SAP RENAME MACRO #}
   {#-- ************************************************************************************************* #}
 
-  {%- macro sap_column_rename(col) -%}
-  {{ parameters.srcMapping.tbl | selectattr('name','equalto',(sources[0].columns | selectattr('id','equalto',column.id) | map(attribute='sourceColumns') | first | map(attribute='node') | map(attribute='name') | first)) | map(attribute='columns') | first | selectattr('oldName','equalto',sources[0].columns | selectattr('id','equalto',column.id) | map(attribute='sourceColumns') | first | map(attribute='column') | map(attribute='name') | first) | map(attribute='newName') | first }}
+  {%- macro sap_simplename(col) -%}
+  {{ parameters.srcMapping.tbl | selectattr('name','equalto',(sources[0].columns | selectattr('id','equalto',column.id) | map(attribute='sourceColumns') | first | map(attribute='node') | map(attribute='name') | first)) | map(attribute='columns') | first | selectattr('sapName','equalto',sources[0].columns | selectattr('id','equalto',column.id) | map(attribute='sourceColumns') | first | map(attribute='column') | map(attribute='name') | first) | map(attribute='simpleName') | first }}
   {%- endmacro -%}
 name: macro
 type: Macro
