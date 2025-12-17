@@ -13,7 +13,12 @@ operation:
   locationName: GOLD
   materializationType: table
   metadata:
-    appliedNodeTests: []
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: Test
+        runOrder: After
+        templateString: ""
     columns:
       - acceptedValues:
           strictMatch: true

@@ -15,9 +15,19 @@ operation:
   locationName: SILVER
   materializationType: table
   metadata:
-    appliedNodeTests: []
+    appliedNodeTests:
+      - continueOnFailure: true
+        description: ""
+        name: Age > 110 years
+        runOrder: After
+        templateString: |-
+          SELECT *
+          FROM {{this}}
+          WHERE DATEDIFF(year, Birthday_Date, CURRENT_DATE()) > 110
     columns:
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: true
+          isDistinct: true
         columnReference:
           columnCounter: ed459cad-f705-4922-bc2b-e24c67a777df
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -31,7 +41,9 @@ operation:
               - columnCounter: 91eaee8e-11f2-46b8-892c-a68e7cb42da2
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: ef2a48b9-cf05-4ee7-a6e6-340fda845f59
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -45,7 +57,9 @@ operation:
               - columnCounter: 6fdba137-ab68-439e-b916-87307a7c8c59
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: UPPER("CUSTOMER_LOYALTY"."FIRST_NAME")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: b1e22a65-9258-4e18-8109-e52eda1dfd52
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -59,7 +73,9 @@ operation:
               - columnCounter: fb96cd17-1cd8-4191-9f25-6341557c8e4b
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: UPPER("CUSTOMER_LOYALTY"."LAST_NAME")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: d6bdf564-a22d-44a7-ab1d-cf25308b6265
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -73,7 +89,9 @@ operation:
               - columnCounter: c58c5eb4-449d-4abd-9061-80460992d515
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: UPPER("CUSTOMER_LOYALTY"."CITY")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 0f2bb390-bff1-4437-ad6e-6cbb3a7e1a8d
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -87,7 +105,9 @@ operation:
               - columnCounter: 62fd5b76-9edd-421e-8679-5e30a271d740
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 8ed2a32f-9df8-43fb-b9ca-56ff0bbfe578
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -101,7 +121,9 @@ operation:
               - columnCounter: b809a5f7-5c9e-4c4c-9ca3-aaa64e237189
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: a2331405-66cb-4320-8e5e-c60fa666979c
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -115,7 +137,9 @@ operation:
               - columnCounter: 52a05660-9b6e-4739-82a3-65c5a88e36ac
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: UPPER("CUSTOMER_LOYALTY"."PREFERRED_LANGUAGE")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: c5ea3292-1f12-40a7-bcfe-b82ec27f3721
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -129,7 +153,9 @@ operation:
               - columnCounter: ac74293b-1ea0-4813-8348-bf3260d4c1bf
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: UPPER("CUSTOMER_LOYALTY"."GENDER")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 68f0fe50-8c7b-499a-b0d0-0a864f696957
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -143,7 +169,9 @@ operation:
               - columnCounter: 14ba582c-91eb-416a-91a0-1d29d6356c13
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: UPPER("CUSTOMER_LOYALTY"."FAVOURITE_BRAND")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 0d33be7f-0550-40e9-8ba5-9b14ad9947b7
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -157,7 +185,9 @@ operation:
               - columnCounter: e90ca991-0fb4-4799-8284-d2bd6c0f738b
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: UPPER("CUSTOMER_LOYALTY"."MARITAL_STATUS")
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 25f7560c-f757-4f2a-a8e9-90162b381d4d
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -171,7 +201,9 @@ operation:
               - columnCounter: a24a5a68-8748-4155-a8d4-e69b6191eaa1
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 1692eb9b-1d77-4728-a7eb-5904fbd03d8b
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -185,7 +217,9 @@ operation:
               - columnCounter: 04473ed0-9f68-45a0-8124-25fd098704e2
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: fe2ba769-a20a-438e-8999-08b4df0a3bc6
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -199,7 +233,9 @@ operation:
               - columnCounter: 4cf630c2-00c8-4133-81f9-cc555087bb35
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 649fdb9b-6ee6-42df-ac6c-70367524bae3
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -213,7 +249,9 @@ operation:
               - columnCounter: 77260b66-4ec1-4a5e-8438-470708e2e83c
                 stepCounter: 69e5ecc2-c3a0-4fa8-8b80-7d6d2f6cd6d5
             transform: ""
-      - appliedColumnTests: {}
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 8c57c71f-82b4-4aec-9a35-4f42e1de65c1
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -230,7 +268,9 @@ operation:
       - acceptedValues:
           strictMatch: true
           values: []
-        appliedColumnTests: {}
+        appliedColumnTests:
+          hasNull: false
+          isDistinct: false
         columnReference:
           columnCounter: 295e947a-e35a-4602-bdb2-46ea0176c8dc
           stepCounter: 126073f3-64fb-42c9-8d5e-5666aab7a3ca
@@ -248,7 +288,9 @@ operation:
             transform: "\"CUSTOMER_LOYALTY\".\"FIRST_NAME\" || ' ' || \"CUSTOMER_LOYALTY\".\"LAST_NAME\""
         systemColumnType: None
     cteString: ""
-    enabledColumnTestIDs: []
+    enabledColumnTestIDs:
+      - hasNull
+      - isDistinct
     sourceMapping:
       - aliases: {}
         customSQL:

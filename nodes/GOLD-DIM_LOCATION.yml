@@ -25,7 +25,7 @@ operation:
         config: {}
         dataType: NUMBER
         defaultValue: ""
-        description: ""
+        description: Surrogate key for the Location dimension table. Uniquely identifies each location record. Used as a foreign key in fact tables to link transactional data to specific locations. Enables efficient querying and reporting based on location attributes. System-generated during the data warehousing process. Not sourced from any specific source table. Integer value automatically incremented for each new location. Primary key for the Location dimension table.
         isSurrogateKey: true
         name: DIM_LOCATION_KEY
         nullable: true
@@ -38,7 +38,7 @@ operation:
           stepCounter: 3b975e99-58f9-48cc-b1d7-399d93131c46
         config: {}
         dataType: NUMBER(19,0)
-        description: ""
+        description: Unique identifier for a location. Business key for the Location dimension table. Sourced directly from the source system's location table. Used to track and identify locations across different systems. Appears in reports that analyze data by location. Integer value without transformations. Serves as an alternate key to prevent duplicates. Enables data integration and consistency across platforms.
         isBusinessKey: true
         name: LOCATION_ID
         nullable: true
@@ -53,7 +53,7 @@ operation:
           stepCounter: 3b975e99-58f9-48cc-b1d7-399d93131c46
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Unique identifier for a location, sourced from the source system. Used for cross-referencing location data with external systems and datasets. Facilitates data enrichment and integration with third-party location services. No transformations applied. Character string from source system. Used in geospatial analysis and mapping applications. Enables linking location data with geographic coordinates and boundaries.
         name: PLACEKEY
         nullable: true
         sourceColumnReferences:
@@ -67,7 +67,7 @@ operation:
           stepCounter: 3b975e99-58f9-48cc-b1d7-399d93131c46
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Name of the location. Provides a descriptive label for each location record. Used in reports and dashboards to display location names. Sourced directly from the source system's location table. No transformations applied. Character string value. Enables users to easily identify and understand location-based data. Used in address validation and standardization processes. Supports location-based search and filtering.
         name: LOCATION
         nullable: true
         sourceColumnReferences:
@@ -81,7 +81,7 @@ operation:
           stepCounter: 3b975e99-58f9-48cc-b1d7-399d93131c46
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: City where the location is situated. Used for geographic segmentation and analysis. Sourced directly from the source system's location table. No transformations applied. Character string value. Enables filtering and grouping data by city. Used in reports that show city-level performance. Supports targeted marketing campaigns based on city demographics. Facilitates urban planning and resource allocation.
         name: CITY
         nullable: true
         sourceColumnReferences:
@@ -95,7 +95,7 @@ operation:
           stepCounter: 3b975e99-58f9-48cc-b1d7-399d93131c46
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Region or state where the location is situated. Used for geographic segmentation and analysis at a regional level. Sourced directly from the source system's location table. No transformations applied. Character string value. Enables filtering and grouping data by region. Used in reports that show regional performance. Supports targeted marketing campaigns based on regional demographics.
         name: REGION
         nullable: true
         sourceColumnReferences:
@@ -109,7 +109,7 @@ operation:
           stepCounter: 3b975e99-58f9-48cc-b1d7-399d93131c46
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: ISO standard country code for the location. Ensures consistency and standardization of country information. Sourced directly from the source system's location table. No transformations applied. Character string value. Used in international reporting and analysis. Enables cross-border comparisons and benchmarking. Supports compliance with international regulations and standards. Facilitates global supply chain management.
         name: ISO_COUNTRY_CODE
         nullable: true
         sourceColumnReferences:
@@ -123,7 +123,7 @@ operation:
           stepCounter: 3b975e99-58f9-48cc-b1d7-399d93131c46
         config: {}
         dataType: VARCHAR(16777216)
-        description: ""
+        description: Name of the country where the location is situated. Used for geographic segmentation and international analysis. Sourced directly from the source system's location table. No transformations applied. Character string value. Enables filtering and grouping data by country. Used in reports that show country-level performance. Supports targeted marketing campaigns based on country demographics.
         name: COUNTRY
         nullable: true
         sourceColumnReferences:
@@ -141,7 +141,7 @@ operation:
         config: {}
         dataType: NUMBER
         defaultValue: ""
-        description: ""
+        description: Tracks the version number of each record in the Location dimension table. System-generated to manage changes over time. Integer value that increments with each update. Used for auditing and historical analysis. Enables tracking of data lineage and changes. Supports point-in-time reporting and analysis. Not sourced from any specific source table. Facilitates data quality monitoring and issue resolution.
         isSystemVersion: true
         name: SYSTEM_VERSION
         nullable: true
@@ -158,7 +158,7 @@ operation:
         config: {}
         dataType: VARCHAR
         defaultValue: ""
-        description: ""
+        description: Indicates whether a record in the Location dimension table is the most current version. System-generated flag with values 'Y' or 'N'. Used to identify the active record for a given location. Enables efficient querying of current location information. Simplifies reporting and analysis by filtering out historical records. Not sourced from any specific source table. Supports data governance and compliance requirements.
         isSystemCurrentFlag: true
         name: SYSTEM_CURRENT_FLAG
         nullable: true
@@ -175,7 +175,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: Timestamp indicating when a record became active in the Location dimension table. System-generated using the current timestamp. Used to track the effective start date of a location record. Enables historical analysis and trend reporting. Supports data lineage and auditing requirements. Not sourced from any specific source table. Facilitates data quality monitoring and issue resolution. Used in slowly changing dimension processing.
         isSystemStartDate: true
         name: SYSTEM_START_DATE
         nullable: true
@@ -192,7 +192,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: Timestamp indicating when a record expired in the Location dimension table. System-generated with a default value of '2999-12-31 00:00:00' for current records. Used to track the effective end date of a location record. Enables historical analysis and trend reporting. Supports data lineage and auditing requirements. Not sourced from any specific source table. Used in slowly changing dimension processing.
         isSystemEndDate: true
         name: SYSTEM_END_DATE
         nullable: true
@@ -209,7 +209,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: Timestamp representing when a record was created in the data warehouse. Reflects the system time upon initial insertion. Used for auditing data ingestion and tracking data lineage. Essential for incremental data updates and change data capture processes. Automatically generated by the system. Not sourced from an upstream system. Enables analysis of data freshness and update frequency. Useful in debugging data anomalies and validating data completeness.
         isSystemCreateDate: true
         name: SYSTEM_CREATE_DATE
         nullable: true
@@ -226,7 +226,7 @@ operation:
         config: {}
         dataType: TIMESTAMP
         defaultValue: ""
-        description: ""
+        description: Timestamp indicating when a record was last modified in the data warehouse. Automatically updated by the system upon any change to the record. Not sourced from an upstream system. Critical for auditing changes and maintaining data integrity. Supports identifying the most recent version of a record. Used in change tracking reports and data synchronization processes. Facilitates identifying stale or outdated information. Essential for monitoring data quality and consistency over time.
         isSystemUpdateDate: true
         name: SYSTEM_UPDATE_DATE
         nullable: true

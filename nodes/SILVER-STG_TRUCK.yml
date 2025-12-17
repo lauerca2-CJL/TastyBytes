@@ -219,14 +219,16 @@ operation:
     enabledColumnTestIDs: []
     materializationOption: ""
     sourceMapping:
-      - aliases: {}
+      - aliases:
+          TRUCK: af0682ed-2a38-4e0e-a181-a0379ebbc79d
         customSQL:
           customSQL: ""
         dependencies:
           - locationName: BRONZE
             nodeName: TRUCK
         join:
-          joinCondition: FROM {{ ref('BRONZE', 'TRUCK') }} "TRUCK"
+          joinCondition: |
+            FROM {{ ref('BRONZE', 'TRUCK') }} "TRUCK"
         name: STG_TRUCK
         noLinkRefs: []
   name: STG_TRUCK
