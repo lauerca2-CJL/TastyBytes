@@ -1,0 +1,199 @@
+fileVersion: 1
+id: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+name: STG_LOCATION
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: |-
+      create tag if not exists Clauer_dev.SILVER.CLASSIFICATION
+        comment = 'data sensitivity classification'
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: Enhanced location staging with placekey parsing, quality flags, and region grouping
+  isMultisource: false
+  locationName: SILVER
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378c-723b-8ded-912779986df4
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: NUMBER
+        description: ""
+        name: LOCATION_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6a449d6a-d6b6-4510-853f-89ab95fb99da
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378c-723b-8ded-979f17a426c1
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PLACEKEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6cb81de6-e4e8-45f3-8601-af42dfd5dd4e
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378c-723b-8ded-9889c0a1a9f8
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: LOCATION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9b238e03-0c55-41ef-b6ab-fe4077cdfa03
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a03-f0134a1bccc0
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ffd5d181-be51-415d-a24b-a3d772237ecf
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a03-f689ec61ef78
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: REGION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ec603f0d-99ac-4dd5-a043-315e0198b6b7
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a03-f9675c4fd39d
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ISO_COUNTRY_CODE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 3b4a557f-6e86-4841-a427-2ab57bdb8f11
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a03-fd1a33d8e44f
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: COUNTRY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0ef53c0d-dfbf-459a-89e9-b1ad0db93001
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a04-02a9ab8ae33b
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: PLACE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6cb81de6-e4e8-45f3-8601-af42dfd5dd4e
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: SPLIT_PART(LOCATION.PLACEKEY, '@', 1)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a04-0551cd5ed185
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 6cb81de6-e4e8-45f3-8601-af42dfd5dd4e
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: SPLIT_PART(LOCATION.PLACEKEY, '@', 2)
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a04-0a023a8edb2e
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: CITY_QUALITY_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ffd5d181-be51-415d-a24b-a3d772237ecf
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: CASE WHEN LOCATION.CITY IS NULL OR LOCATION.CITY = '' THEN 'MISSING_CITY' ELSE 'VALID_CITY' END
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019bb2e4-378d-7490-8a04-0cf7b7cdbde1
+          stepCounter: 909fd85e-ee84-4ad0-8f58-9cb5a3bbae04
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: REGION_GROUP
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ec603f0d-99ac-4dd5-a043-315e0198b6b7
+                stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+            transform: CASE WHEN LOCATION.REGION IN ('CA', 'OR', 'WA') THEN 'WEST_COAST' WHEN LOCATION.REGION IN ('FL', 'GA', 'SC', 'NC') THEN 'SOUTH_EAST' ELSE 'OTHER' END
+    cteString: ""
+    description: ""
+    destinationName: ""
+    enabledColumnTestIDs: []
+    materializationOption: ""
+    sourceMapping:
+      - aliases:
+          LOCATION: 033f9890-a451-48cd-ad7a-504e9cf88500
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: BRONZE
+            nodeName: LOCATION
+        join:
+          joinCondition: FROM {{ ref('BRONZE', 'LOCATION') }} LOCATION
+        name: STG_LOCATION
+        noLinkRefs: []
+  name: STG_LOCATION
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
