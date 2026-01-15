@@ -394,20 +394,6 @@ operation:
               - columnCounter: 9f7b03db-d631-45cc-9e1f-d6a159a10b07
                 stepCounter: afdc78f7-188d-403e-8dd3-36ecc4a5938d
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 37f5559a-2fa7-4a7f-b4a6-102d3be6cea2
-          stepCounter: 4cdc6e59-3616-44e8-8acf-313ce4aa0bd1
-        config: {}
-        dataType: VARCHAR
-        description: ""
-        name: ORDER_CATEGORY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 72f159fc-3299-41df-86d1-31e54d4eb20f
-                stepCounter: afdc78f7-188d-403e-8dd3-36ecc4a5938d
-            transform: ""
       - acceptedValues:
           strictMatch: true
           values: []

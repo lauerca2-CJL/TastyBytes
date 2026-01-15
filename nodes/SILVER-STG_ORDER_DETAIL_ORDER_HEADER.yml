@@ -393,20 +393,6 @@ operation:
               - columnCounter: 171cf4ef-6696-4171-88ec-5c5befc7201f
                 stepCounter: 8082b41d-1327-4913-aea2-dd1c8adfca26
             transform: ""
-      - appliedColumnTests: {}
-        columnReference:
-          columnCounter: 019b13cb-6261-7459-b3a1-eb3ee7d0aa92
-          stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47
-        config: {}
-        dataType: VARCHAR
-        description: ""
-        name: ORDER_CATEGORY
-        nullable: true
-        sourceColumnReferences:
-          - columnReferences:
-              - columnCounter: 171cf4ef-6696-4171-88ec-5c5befc7201f
-                stepCounter: 8082b41d-1327-4913-aea2-dd1c8adfca26
-            transform: CASE WHEN "ORDER_HEADER"."ORDER_TOTAL" > 1000 THEN 'Large Order' ELSE 'Small Order' END
     cteString: ""
     description: ""
     destinationName: ""
