@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "24"
+includeSelector: "+{ location: GOLD name: FCT_ORDER_DETAIL_ORDER_HEADER1 }"
+name: Full Run
+type: Job
