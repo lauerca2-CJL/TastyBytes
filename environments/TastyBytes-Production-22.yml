@@ -1,14 +1,14 @@
 fileVersion: 1
-id: "19"
+id: "22"
 mappingDefinitions:
   BRONZE:
     database: CLAUER_DEV
     schema: TASTY_BYTES
   GOLD:
-    database: CLAUER_QA
+    database: CLAUER_PROD
     schema: GOLD
   SILVER:
-    database: CLAUER_QA
+    database: CLAUER_PROD
     schema: SILVER
-name: QA
+name: Tasty Bytes - Production
 type: Environment
