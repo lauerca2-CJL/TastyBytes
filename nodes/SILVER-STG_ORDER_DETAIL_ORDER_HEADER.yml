@@ -393,6 +393,32 @@ operation:
               - columnCounter: 171cf4ef-6696-4171-88ec-5c5befc7201f
                 stepCounter: 8082b41d-1327-4913-aea2-dd1c8adfca26
             transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c6d26-c9ee-738c-8690-63209327262d
+          stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47
+        config: {}
+        dataType: TIMESTAMP
+        description: ""
+        name: LAST_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CURRENT_TIMESTAMP()
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 019c7243-4949-751a-ae50-f320fec562f2
+          stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 171cf4ef-6696-4171-88ec-5c5befc7201f
+                stepCounter: 8082b41d-1327-4913-aea2-dd1c8adfca26
+            transform: CASE WHEN "ORDER_HEADER"."ORDER_TOTAL" > 1000 THEN 'Large Order' ELSE 'Small Order' END
     cteString: ""
     description: ""
     destinationName: ""

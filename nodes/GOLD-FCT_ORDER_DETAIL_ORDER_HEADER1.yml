@@ -428,6 +428,23 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 819233b4-121f-4572-b15d-67fe74b551e7
+          stepCounter: 4cdc6e59-3616-44e8-8acf-313ce4aa0bd1
+        config: {}
+        dataType: VARCHAR
+        description: ""
+        name: ORDER_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e488b52f-6371-48d6-a924-f414ddf5d53d
+                stepCounter: afdc78f7-188d-403e-8dd3-36ecc4a5938d
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
