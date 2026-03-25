@@ -1,10 +1,10 @@
 fileVersion: 1
-id: 033f9890-a451-48cd-ad7a-504e9cf88500
+id: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
 name: LOCATION
 operation:
   database: ""
   deployEnabled: true
-  description: ""
+  description: The table contains records of geographic locations. Each record includes details about the location's place key, name, city, region, country, and ISO country code.
   locationName: BRONZE
   metadata:
     columns:
@@ -13,8 +13,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6a449d6a-d6b6-4510-853f-89ab95fb99da
-          stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+          columnCounter: 463e5b1b-858d-45e7-932d-430d8ce0b525
+          stepCounter: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
         config: {}
         dataType: NUMBER(19,0)
         defaultValue: ""
@@ -32,8 +32,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 6cb81de6-e4e8-45f3-8601-af42dfd5dd4e
-          stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+          columnCounter: b693838f-a8f7-4605-874a-b72ea0293860
+          stepCounter: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -51,8 +51,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 9b238e03-0c55-41ef-b6ab-fe4077cdfa03
-          stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+          columnCounter: ce0deb3f-0a4a-4cfd-b54c-0be79df1fa3a
+          stepCounter: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -70,8 +70,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ffd5d181-be51-415d-a24b-a3d772237ecf
-          stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+          columnCounter: 0a3ac11a-e050-4586-a692-097a1e4c73db
+          stepCounter: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -89,8 +89,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: ec603f0d-99ac-4dd5-a043-315e0198b6b7
-          stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+          columnCounter: 21d95e72-ca83-4139-884d-7e37745f4a6b
+          stepCounter: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -108,8 +108,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 3b4a557f-6e86-4841-a427-2ab57bdb8f11
-          stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+          columnCounter: c051d4d0-7933-450c-895f-dc68a0838c38
+          stepCounter: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""
@@ -127,8 +127,8 @@ operation:
           values: []
         appliedColumnTests: {}
         columnReference:
-          columnCounter: 0ef53c0d-dfbf-459a-89e9-b1ad0db93001
-          stepCounter: 033f9890-a451-48cd-ad7a-504e9cf88500
+          columnCounter: 526df153-ecf3-40be-8cfe-d26a394c3b42
+          stepCounter: cb96613a-28e4-43f8-b19e-a0ab1e234eb8
         config: {}
         dataType: VARCHAR(16777216)
         defaultValue: ""

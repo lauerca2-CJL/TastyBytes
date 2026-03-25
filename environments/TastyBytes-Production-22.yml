@@ -2,16 +2,16 @@ fileVersion: 1
 id: "22"
 mappingDefinitions:
   BRONZE:
-    database: MTANTRUM_DEV
-    schema: TASTY_BYTES_SMALL
-  GOLD:
     database: CLAUER_DEV
+    schema: BRONZE
+  GOLD:
+    database: CLAUER_PROD
     schema: GOLD
   SAP-BRONZE:
     database: DOUG_DB
     schema: SAP_SOURCE
   SILVER:
-    database: CLAUER_DEV
+    database: CLAUER_PROD
     schema: SILVER
-name: Production
+name: Tasty Bytes - Production
 type: Environment
