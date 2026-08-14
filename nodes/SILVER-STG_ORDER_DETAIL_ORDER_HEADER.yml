@@ -405,6 +405,22 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CURRENT_TIMESTAMP()
+      - appliedColumnTests:
+          hasNull: false
+          isDistinct: false
+        columnReference:
+          columnCounter: 019ffc41-9437-7699-8f43-9c5b0e9b4a4e
+          stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47
+        config: {}
+        dataType: VARCHAR
+        description: Order size classification based on ORDER_TOTAL threshold of 100.
+        name: ORDER_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0211cf26-323b-4f41-b0f5-022ba687a65f
+                stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47
+            transform: CASE WHEN "ORDER_HEADER"."ORDER_TOTAL" > 100 THEN 'Larger Order' ELSE 'Small Order' END
     cteString: ""
     description: ""
     destinationName: ""

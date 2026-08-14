@@ -428,6 +428,23 @@ operation:
         sourceColumnReferences:
           - columnReferences: []
             transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: df83b29a-977d-4a84-91d9-88afe5a9b0ab
+          stepCounter: 4cdc6e59-3616-44e8-8acf-313ce4aa0bd1
+        config: {}
+        dataType: VARCHAR
+        description: Order size classification based on ORDER_TOTAL threshold of 100.
+        name: ORDER_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 99100206-bec2-4429-8c6c-c60a8d4a9938
+                stepCounter: afdc78f7-188d-403e-8dd3-36ecc4a5938d
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:

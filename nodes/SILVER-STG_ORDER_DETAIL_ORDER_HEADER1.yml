@@ -395,6 +395,23 @@ operation:
               - columnCounter: 0211cf26-323b-4f41-b0f5-022ba687a65f
                 stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47
             transform: ""
+      - acceptedValues:
+          strictMatch: false
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 99100206-bec2-4429-8c6c-c60a8d4a9938
+          stepCounter: afdc78f7-188d-403e-8dd3-36ecc4a5938d
+        config: {}
+        dataType: VARCHAR
+        description: Order size classification based on ORDER_TOTAL threshold of 100.
+        name: ORDER_CATEGORY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 019ffc41-9437-7699-8f43-9c5b0e9b4a4e
+                stepCounter: baaccb3b-87c5-4bd6-abe1-1015340d3d47
+            transform: ""
     cteString: ""
     enabledColumnTestIDs: []
     sourceMapping:
