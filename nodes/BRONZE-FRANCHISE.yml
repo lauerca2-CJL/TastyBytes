@@ -1,0 +1,149 @@
+fileVersion: 1
+id: 914e7d4b-c620-4d85-90f2-52da86466d25
+name: FRANCHISE
+operation:
+  database: ""
+  deployEnabled: true
+  description: The table contains records of individuals associated with a franchise. Each record includes details about the person's name, contact information, and location.
+  locationName: BRONZE
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e6d488e4-5026-4f66-8f22-d6cf6b0bf8fb
+          stepCounter: 914e7d4b-c620-4d85-90f2-52da86466d25
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: FRANCHISE_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 57a537b3-423f-44a8-bd31-186b6ee912cc
+          stepCounter: 914e7d4b-c620-4d85-90f2-52da86466d25
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: FIRST_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e86534cb-3802-4ae8-98ce-7fe26e3eda10
+          stepCounter: 914e7d4b-c620-4d85-90f2-52da86466d25
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LAST_NAME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8f0586c9-1517-4d62-852a-58b31cfc00eb
+          stepCounter: 914e7d4b-c620-4d85-90f2-52da86466d25
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: CITY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 513d7249-f4a9-4323-8e76-c92f875370b5
+          stepCounter: 914e7d4b-c620-4d85-90f2-52da86466d25
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: COUNTRY
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6927ac8-daf8-4e1c-a4d9-bba74c39d541
+          stepCounter: 914e7d4b-c620-4d85-90f2-52da86466d25
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: E_MAIL
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9f0d27ec-99ba-43f3-9890-91409d97b8a8
+          stepCounter: 914e7d4b-c620-4d85-90f2-52da86466d25
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: PHONE_NUMBER
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: FRANCHISE
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node
