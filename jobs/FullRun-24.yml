@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "24"
-includeSelector: "+{ location: GOLD name: FCT_ORDER_DETAIL_ORDER_HEADER1 }"
+includeSelector: "{ location: \"SILVER\" name: \"STG_CUSTOMER_LOYALTY\" } OR { location: \"GOLD\" name: \"DIM_CUSTOMER_LOYALTY\" } OR { location: \"GOLD\" name: \"DIM_LOCATION\" } OR { location: \"GOLD\" name: \"DIM_MENU\" } OR { location: \"GOLD\" name: \"DIM_TRUCK\" } OR { location: \"GOLD\" name: \"FCT_ORDER_LINE\" } OR { location: \"BRONZE\" name: \"CUSTOMER_LOYALTY\" } OR { location: \"BRONZE\" name: \"LOCATION\" } OR { location: \"BRONZE\" name: \"MENU\" } OR { location: \"BRONZE\" name: \"ORDER_DETAIL\" } OR { location: \"BRONZE\" name: \"ORDER_HEADER\" } OR { location: \"BRONZE\" name: \"TRUCK\" } OR { location: \"SILVER\" name: \"STG_LOCATION\" } OR { location: \"SILVER\" name: \"STG_MENU\" } OR { location: \"SILVER\" name: \"STG_ORDER_DETAIL_ORDER_HEADER\" } OR { location: \"SILVER\" name: \"STG_TRUCK\" }"
 name: Full Run
 type: Job

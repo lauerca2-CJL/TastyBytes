@@ -2,8 +2,8 @@ fileVersion: 1
 id: "22"
 mappingDefinitions:
   BRONZE:
-    database: CLAUER_DEV
-    schema: TASTY_BYTES
+    database: CLAUER_PROD
+    schema: TASTY_BYTES_PROD
   GOLD:
     database: CLAUER_PROD
     schema: GOLD
